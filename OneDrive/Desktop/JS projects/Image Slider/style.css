@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:wght@600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: #24384d;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+h3 {
+  color: #fff;
+  font-size: 2rem;
+  padding-bottom: 0.7rem;
+  letter-spacing: 1px;
+}
+h5 {
+  color: #fff;
+  font-size: 1rem;
+  padding-bottom: 3rem;
+}
+
+.card {
+  position: relative;
+  background-color: white;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  padding: 30px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.img-card {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 100px;
+}
+
+.img-card img {
+  background-position: center;
+  background-size: cover;
+}
+
+.review {
+  padding-bottom: 1rem;
+}
+
+.star {
+  color: #ff5733;
+  font-size: 0.8rem;
+}
+
+.prevBtn,
+.nextBtn {
+  color: #ff5733;
+  font-size: 1.8rem;
+  width: 45px;
+  height: 45px;
+  max-width: 45px;
+  max-height: 45px;
+  line-height: 45px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.prevBtn {
+  position: absolute;
+  top: 10%;
+  right: 14%;
+}
+.nextBtn {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+
+.btn:hover {
+    background-color: #ff5733;
+    color: #fff;
+    transition: all .9s linear;
+    -webkit-transition: all .9s ease;
+    -moz-transition: all .9s linear;
+    -ms-transition: all .9s linear;
+    -o-transition: all .9s linear;
+}
+
+@media only screen and (max-width: 640px) {
+    .card {
+        width: 90%;
+        padding-bottom: 20px;
+    }
+
+    .prevBtn {
+        position: absolute;
+        top: 10%;
+        right: 16%;
+      }
+      
+}

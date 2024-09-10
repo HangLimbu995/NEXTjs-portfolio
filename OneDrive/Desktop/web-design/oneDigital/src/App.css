@@ -1,0 +1,22 @@
+
+@font-face {
+  font-family: roboto;
+  src: url(./assets/Roboto-Medium.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html , body {
+  width: 100%;
+  height: 100%;
+  font-family: roboto;
+}
+
+
+button {
+  background: linear linear-gradient(to bottom ,#1E69E1,#6CA5FF)
+}

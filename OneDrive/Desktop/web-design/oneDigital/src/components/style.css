@@ -1,0 +1,28 @@
+.top-contact ul li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@keyframes pulse-and-disappear {
+  0%{
+    opacity: 0;
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+ 100%{
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+}
+
+.animate-pulse-and-disappear {
+  animation: pulse-and-disappear 2s ease-in-out infinite;
+}

@@ -6,10 +6,10 @@ import './style.css'
 
 const TopContact = () => {
     return (
-        <div className='top-contact relative w-full h-full flex justify-center bg-blue-700 px-2' style={{zIndex: 2}}>
+        <div className='top-contact relative w-full h-full flex justify-center bg-blue-700 px-4' style={{zIndex: 2}}>
             <div className='inherit w-full md:w-[80%] h-full flex justify-between items-center py-1'>
                 <div>
-                    <h2 className='md:text-[18px] font-[600] leading-[27px] text-white'>Focused on Crative & Best Quality Solutions</h2>
+                    <h2 className='text-[12px] md:text-[18px] font-[600] leading-[27px] text-white'>Focused on Crative & Best Quality Solutions</h2>
                 </div>
                 <div>
                     <ul className='flex gap-3 md:gap-7 text-white text-[16px] leading-[24px] font-[600] ' >

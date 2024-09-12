@@ -105,6 +105,16 @@ const WebDebelopment = () => {
                         </div>
                     </div>
                 </div>
+    {/* persuation */}
+    
+    <div className='container mx-auto px-4 py-12 lg:py-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-3xl shadow-lg'>
+    <div className='max-w-4xl mx-auto text-center'>
+      <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6'>Unleash Your Brand's Potential with Our Digital Marketing Services</h2>
+      <p className='text-lg md:text-xl text-blue-100 leading-relaxed'>
+        At Onetech Solution, we specialize in driving growth and achieving measurable results through our comprehensive digital marketing services. Our team of experts uses the latest strategies and tools to elevate your brand and connect with your target audience.
+      </p>
+    </div>
+  </div>
 
                 {/* Informative Websites */}
                 <div className='container mx-auto px-4 py-12 lg:py-16'>

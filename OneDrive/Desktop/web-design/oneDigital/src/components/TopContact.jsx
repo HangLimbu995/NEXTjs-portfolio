@@ -2,6 +2,7 @@ import React from 'react'
 import { FaFacebook, FaPhoneAlt,FaWhatsapp  } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import './style.css'
+import { Link } from 'react-router-dom';
 
 
 const TopContact = () => {
@@ -13,12 +14,12 @@ const TopContact = () => {
                 </div>
                 <div>
                     <ul className='flex gap-3 md:gap-7 text-white text-[16px] leading-[24px] font-[600] ' >
-                        <li><a href='tel:+977-9849992404' target='_black'><FaPhoneAlt /><span className='hidden lg:flex'>+977-9849992404</span></a>
+                        <li><Link to='tel:+977-9849992404' target='_black'><FaPhoneAlt /><span className='hidden lg:flex'>+977-9849992404</span></Link>
                         </li>
-                        <li><a href="https://wa.me/9779849992404" target='_black'>
-                        <FaWhatsapp  /><span className='hidden lg:flex'>+977-9849992404</span></a>
+                        <li><Link to="https://wa.me/9779849992404" target='_black'>
+                        <FaWhatsapp  /><span className='hidden lg:flex'>+977-9849992404</span></Link>
                         </li>
-                        <li><a href='mailto:aakashjungkarki@gmail.com' target='_black'><MdEmail /><span className='hidden lg:flex'>Email us</span></a></li>
+                        <li><Link to='mailto:aakashjungkarki@gmail.com' target='_black'><MdEmail /><span className='hidden lg:flex'>Email us</span></Link></li>
                     </ul>
                 </div>
             </div>

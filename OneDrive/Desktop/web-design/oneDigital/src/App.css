@@ -55,3 +55,33 @@ button {
 .animate-slide-in-right {
   animation: slide-in-right 0.5s ease-out forwards;
 }
+
+
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-wave span {
+  display: inline-block;
+  animation: wave 2s ease-in-out infinite;
+}
+
+.animate-wave span:nth-child(even) {
+  animation-delay: 0.5s;
+}
+
+.animate-wave span:nth-child(3n) {
+  animation-delay: 0.75s;
+}

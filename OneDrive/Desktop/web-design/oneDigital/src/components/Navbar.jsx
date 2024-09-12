@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className={`sticky top-0 left-0 right-0 transition-all duration-500 w-full py-1 ${scrolled ? 'bg-white/30 backdrop-blur-md' : 'bg-transparent'}`} style={{ zIndex: 9999 }}>
             <nav className="relative w-full flex justify-around items-center">
                 <div>
-                    <Link to="/" className='text-2xl text-white font-bold flex items-start z-[2000]'>Logo</Link>
+                    <Link to="/" className='text-2xl text-black font-bold flex items-start z-[2000]'>Logo</Link>
                 </div>
                 <div>
                     <ul className='gap-7 font-semibold text-base capitalize hidden md:flex'>

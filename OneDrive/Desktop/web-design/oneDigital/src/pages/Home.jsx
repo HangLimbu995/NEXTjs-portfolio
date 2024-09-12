@@ -2,10 +2,13 @@ import React, { useEffect, useRef } from 'react'
 import rocket from '../assets/rocket.png'
 import Typed from 'typed.js'
 import { FaWhatsapp } from "react-icons/fa";
+import {Link} from 'react-router-dom'
 import ImageImporter from '../helpers/ImageImporter'
 
 import choose from '../assets/choose.png'
 import WorkCard from '../components/WorkCard';
+
+import wave from '../assets/wave.svg'
 
 const { google, slack, shopify, wordpress, fiveStar, target, support, growth, light, headerImg } = ImageImporter
 
@@ -152,9 +155,11 @@ const Home = () => {
                                 <div className='p-6'>
                                     <h3 className='text-2xl font-semibold mb-3'>{service.title}</h3>
                                     <p className='text-gray-600 text-base mb-5'>{service.description}</p>
-                                    <button className='w-full py-3 bg-blue-700 rounded-lg text-white text-sm font-medium transition-colors duration-300 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50'>
-                                        Learn More
-                                    </button>
+                                    <Link to={`/services/${service.link}`} className='block w-full'>
+                                        <button className='w-full py-3 bg-blue-700 rounded-lg text-white text-sm font-medium transition-colors duration-300 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50'>
+                                            Learn More
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         ))}
@@ -162,48 +167,47 @@ const Home = () => {
                 </div>
 
                 {/* why choose us */}
-                <div className='container mx-auto px-4 sm:px-6 lg:px-8 mt-24'>
-                    <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold text-center text-blue-700 mb-4'>Why Choose Webstark?</h2>
-                    <div className='w-24 h-1 bg-blue-700 mx-auto mb-8'></div>
-                    <p className='text-lg text-gray-600 text-center mb-16 max-w-3xl mx-auto'>
-                        At Webstark, we blend innovation with functionality to propel your brand to new heights. Experience unmatched dedication, tailored solutions, and a commitment to your success.
-                    </p>
-                    <div className='relative flex flex-col-reverse md:flex-col'>
-                        <img src={choose} className='mx-auto w-full max-w-3xl mt-8 md:mt-0' alt="Why choose Webstark" />
-                        <div className='md:absolute inset-0 flex items-center justify-center'>
-                            <div className='flex flex-col w-full relative'>
-                                {[
-                                    { icon: '🏆', title: 'Expertise', description: 'Years of industry experience' },
-                                    { icon: '💡', title: 'Innovation', description: 'Cutting-edge technologies' },
-                                    { icon: '🎨', title: 'Customization', description: 'Tailored to your needs' },
-                                    { icon: '🛠️', title: 'Support', description: '24/7 customer assistance' },
-                                    { icon: '📈', title: 'Results', description: 'Proven track record of success' },
-                                    { icon: '💰', title: 'Value', description: 'Competitive pricing' }
-                                ].map((item, index) => (
-                                    <div key={index} className={`flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'} mb-5 relative`}>
-                                        <div className={`bg-white bg-opacity-90 p-4 rounded-lg shadow-md w-full md:w-1/2 ${index % 2 === 0 ? 'md:rounded-tl-none' : 'md:rounded-tr-none'} flex items-center`}>
-                                            <div className="text-3xl mr-4">{item.icon}</div>
-                                            <div>
-                                                <h3 className='text-lg font-semibold mb-2'>{item.title}</h3>
-                                                <p className='text-sm text-gray-600'>{item.description}</p>
+                <div className='w-full bg-gradient-to-b from-gray-100 via-gray-100 to-white'>
+                    <div className='container mx-auto px-4 sm:px-6 lg:px-8 mt-24'>
+                        <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold text-center text-blue-700 mb-4'>Why Choose Webstark?</h2>
+                        <div className='w-24 h-1 bg-blue-700 mx-auto mb-8'></div>
+                        <p className='text-lg text-gray-600 text-center mb-16 max-w-3xl mx-auto'>
+                            At Webstark, we blend innovation with functionality to propel your brand to new heights. Experience unmatched dedication, tailored solutions, and a commitment to your success.
+                        </p>
+                        <div className='relative flex flex-col md:flex-row'>
+                            <img src={choose} className='mx-auto w-full max-w-3xl mt-8 md:mt-0' alt="Why choose Webstark" />
+                            <div className='md:absolute inset-0 flex items-center justify-center'>
+                                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full'>
+                                    {[
+                                        { icon: '🏆', title: 'Expertise Across Domains', description: 'Our seasoned team offers a breadth of knowledge, ensuring all your digital needs are met with professional excellence.' },
+                                        { icon: '💡', title: 'Customized Strategies', description: 'We believe in a bespoke approach, tailoring solutions to perfectly align with your business objectives and brand ethos.' },
+                                        { icon: '📊', title: 'Results-Driven Approach', description: "Your growth is our metric for success. We're committed to delivering tangible results that contribute to your bottom line." },
+                                        { icon: '🚀', title: 'Cutting-Edge Technology', description: 'Stay at the forefront of innovation with our adoption of the latest technologies, giving you a robust competitive advantage.' },
+                                        { icon: '🤝', title: 'Transparent Collaboration', description: 'Experience seamless cooperation with our transparent workflow, keeping you in the loop and part of every strategic decision.' },
+                                        { icon: '🛠️', title: 'Aftercare & Support', description: 'We extend our partnership beyond project completion, providing continuous support to ensure your digital assets consistently perform.' }
+                                    ].map((item, index) => (
+                                        <div key={index} className={`flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'} mb-5`}>
+                                            <div className='bg-white bg-opacity-90 p-4 rounded-lg shadow-md w-full md:w-5/6 flex items-start'>
+                                                <div className="text-3xl mr-4 flex-shrink-0">{item.icon}</div>
+                                                <div>
+                                                    <h3 className='text-lg font-semibold mb-2'>{item.title}</h3>
+                                                    <p className='text-sm text-gray-600'>{item.description}</p>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div className={`hidden md:block absolute ${index % 2 === 0 ? 'left-[calc(50%-10px)]' : 'right-[calc(50%-10px)]'} top-1/2 transform -translate-y-1/2 w-0 h-0 border-solid border-[10px] ${index % 2 === 0 ? 'border-l-white border-r-transparent' : 'border-r-white border-l-transparent'} border-t-transparent border-b-transparent`}></div>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 {/* Achivements */}
-                <div className='relative w-full min-h-[70vh] bg-fixed bg-center bg-no-repeat bg-cover' style={{ backgroundImage: "url('https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2023/12/29122131/pokhra-1-1600x900.jpeg')" }}>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute top-0 left-0 w-full">
-                        <path fill="#ffffff" fillOpacity="0.5" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,106.7C960,107,1056,85,1152,80C1248,75,1344,85,1392,90.7L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
-                    </svg>
-                    <div className='absolute inset-0 bg-black bg-opacity-50'></div>
-                    <div className='relative z-10 container mx-auto px-4 py-12 h-full flex items-center justify-center'>
-                        <div className='flex flex-wrap justify-center items-center gap-4 h-full'>
+                <div className='relative w-full min-h-[50vh] bg-fixed bg-center bg-no-repeat bg-cover flex items-center' style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')" }}>
+                <img src={wave} className='w-full h-[10vh] absolute top-[-1px] left-0  filter brightness-0 invert !z-10' alt="Bottom wave" />
+                    <div className='absolute inset-0 bg-black bg-opacity-60'></div>
+                    <div className='relative z-10 container mx-auto px-4 w-full py-12 sm:py-16 md:py-20'>
+                        <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 justify-items-center'>
                             {[
                                 { icon: '🚀', number: '500+', text: 'Projects Delivered' },
                                 { icon: '😊', number: '300+', text: 'Happy Clients' },
@@ -211,21 +215,19 @@ const Home = () => {
                                 { icon: '👥', number: '1000+', text: 'Customers' },
                                 { icon: '✅', number: '100%', text: 'Satisfaction Guarantee' }
                             ].map((item, index) => (
-                                <div key={index} className='bg-white bg-opacity-90 rounded-lg p-3 sm:p-4 text-center transform transition-all duration-300 hover:scale-105 w-full xs:w-[calc(50%-8px)] sm:w-[calc(33.333%-10.667px)] md:w-[calc(33.333%-10.667px)] lg:w-[calc(20%-12.8px)] flex flex-col justify-center'>
-                                    <div className='text-2xl xs:text-3xl sm:text-4xl mb-1 sm:mb-2'>{item.icon}</div>
-                                    <div className='text-xl xs:text-2xl sm:text-3xl font-bold text-blue-700 mb-1 sm:mb-2'>{item.number}</div>
-                                    <p className='text-xs sm:text-sm md:text-base text-gray-700'>{item.text}</p>
+                                <div key={index} className='bg-white bg-opacity-95 rounded-lg p-3 sm:p-4 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl flex flex-col items-center justify-center w-full max-w-[150px] aspect-square'>
+                                    <div className='text-2xl sm:text-3xl mb-1 sm:mb-2'>{item.icon}</div>
+                                    <div className='text-xl sm:text-2xl font-bold text-blue-700 mb-1'>{item.number}</div>
+                                    <p className='text-xs sm:text-sm text-gray-700'>{item.text}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute bottom-0 left-0 w-full">
-                        <path fill="#ffffff" fillOpacity="0.4" d="M0,256L48,245.3C96,235,192,213,288,213.3C384,213,480,235,576,256C672,277,768,299,864,293.3C960,288,1056,256,1152,245.3C1248,235,1344,245,1392,250.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-                    </svg>
+                    <img src={wave} className='w-full h-[10vh] absolute bottom-[-1px] left-0 rotate-180 filter brightness-0 invert' alt="Bottom wave" />
                 </div>
 
                 {/* Our Latest Work */}
-                <div className=" mx-auto px-4 py-12 text-center">
+                <div className="mx-auto px-4 py-12 text-center bg-gradient-to-b from-white via-white to-transparent" style={{ backgroundSize: '100% 101%' }}>
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 pb-2 border-b-2 border-blue-500 inline-block">Our Latest Work</h2>
                     <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
                         Explore our portfolio to see the range of projects we have successfully completed. From website designs to mobile apps, our work speaks for itself.
@@ -410,14 +412,14 @@ const Home = () => {
 }
 
 const serviceData = [
-    { title: 'Web Development', description: 'Custom websites that engage and convert visitors, built with cutting-edge technologies.', image: 'https://img.freepik.com/free-photo/web-design-concepts-with-blurred-background_1134-82.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1725926400&semt=ais_hybrid' },
-    { title: 'Digital Marketing', description: 'Comprehensive strategies to boost your online presence and reach your target audience effectively.', image: 'https://img.freepik.com/free-vector/digital-marketing-infographic_52683-9003.jpg?size=626&ext=jpg&ga=GA1.1.123217531.1718750106&semt=ais_hybrid' },
-    { title: 'E-commerce Solutions', description: 'Robust and scalable platforms to power your online store and drive sales growth.', image: 'https://static3.bigstockphoto.com/2/7/1/large1500/172620335.jpg' },
-    { title: 'UI/UX Design', description: 'Intuitive and visually appealing interfaces that enhance user experience and satisfaction.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb6C0qHN0Ho90IKgg3LJkcia_YqnMRL9JcaGTY9vkd5idoYKdh-m4m9B-lMzK0AcM1l-o&usqp=CAU' },
-    { title: 'Graphic Design', description: 'Creative designs that visually communicate your brand message and captivate your audience.', image: 'https://img.freepik.com/free-vector/graphic-design-colorful-geometrical-lettering_52683-34588.jpg' },
-    { title: 'Animation Video', description: 'Engaging animated videos that tell your story and promote your products or services.', image: 'https://media.licdn.com/dms/image/D5612AQE2ddwB_5SSkQ/article-cover_image-shrink_600_2000/0/1700816309601?e=2147483647&v=beta&t=eTOVcyKrlX9udTyvjsWTK5p-E91NmwJEqMalNc1S-Ww' },
-    { title: 'WhatsApp/Email Marketing', description: 'Targeted marketing campaigns through WhatsApp and email to reach your audience directly.', image: 'https://eyekillerweb.s3.amazonaws.com/eyekiller-blog-email-marketing.jpg' },
-    { title: 'SEO', description: 'Search engine optimization strategies to improve your website’s visibility and ranking.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfniX2Xro4UBGMPRc62rIRqRhYDPgM1_IRMQRz5ZS39G2gmYpGOc4JrHVtXmHPaNMpq7o&usqp=CAU' }
+    { title: 'Web Development', description: 'Custom websites that engage and convert visitors, built with cutting-edge technologies.', image: 'https://img.freepik.com/free-photo/web-design-concepts-with-blurred-background_1134-82.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1725926400&semt=ais_hybrid', link: 'web-development' },
+    { title: 'Digital Marketing', description: 'Comprehensive strategies to boost your online presence and reach your target audience effectively.', image: 'https://img.freepik.com/free-vector/digital-marketing-infographic_52683-9003.jpg?size=626&ext=jpg&ga=GA1.1.123217531.1718750106&semt=ais_hybrid', link: 'digital-marketing' },
+    { title: 'E-commerce Solutions', description: 'Robust and scalable platforms to power your online store and drive sales growth.', image: 'https://static3.bigstockphoto.com/2/7/1/large1500/172620335.jpg', link: 'ecommerce' },
+    { title: 'UI/UX Design', description: 'Intuitive and visually appealing interfaces that enhance user experience and satisfaction.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb6C0qHN0Ho90IKgg3LJkcia_YqnMRL9JcaGTY9vkd5idoYKdh-m4m9B-lMzK0AcM1l-o&usqp=CAU', link: 'ui-ux-design' },
+    { title: 'Graphic Design', description: 'Creative designs that visually communicate your brand message and captivate your audience.', image: 'https://img.freepik.com/free-vector/graphic-design-colorful-geometrical-lettering_52683-34588.jpg', link: 'graphic-design' },
+    { title: 'Animation Video', description: 'Engaging animated videos that tell your story and promote your products or services.', image: 'https://media.licdn.com/dms/image/D5612AQE2ddwB_5SSkQ/article-cover_image-shrink_600_2000/0/1700816309601?e=2147483647&v=beta&t=eTOVcyKrlX9udTyvjsWTK5p-E91NmwJEqMalNc1S-Ww', link: 'animation' },
+    { title: 'WhatsApp/Email Marketing', description: 'Targeted marketing campaigns through WhatsApp and email to reach your audience directly.', image: 'https://eyekillerweb.s3.amazonaws.com/eyekiller-blog-email-marketing.jpg', link: 'marketing' },
+    { title: 'SEO', description: "Search engine optimization strategies to improve your website's visibility and ranking.", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfniX2Xro4UBGMPRc62rIRqRhYDPgM1_IRMQRz5ZS39G2gmYpGOc4JrHVtXmHPaNMpq7o&usqp=CAU', link: 'seo' }
 ]
 
 const worksData = [

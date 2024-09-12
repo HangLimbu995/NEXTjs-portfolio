@@ -141,8 +141,8 @@ const DigitalMarketing = () => {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: "Experienced Team", image: team, description: "Our team of digital marketing experts brings years of experience and a proven track record of success." },
               { title: "Customized Solutions", image: customize, description: "We tailor our strategies to meet your unique business needs and goals." },
@@ -150,12 +150,12 @@ const DigitalMarketing = () => {
               { title: "Continuous Improvement", image: improvement, description: "We constantly analyze and refine our strategies to ensure optimal results for your business." }
             ].map((feature, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <div className="flex justify-center items-center pt-6">
-                  <img src={feature.image} alt={feature.title} className="w-24 h-24 object-cover object-center rounded-full" />
+                <div className="flex justify-center items-center pt-4">
+                  <img src={feature.image} alt={feature.title} className="w-20 h-20 object-cover object-center rounded-full" />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                <div className="p-4">
+                  <h3 className="text-lg font-bold text-gray-800 mb-2">{feature.title}</h3>
+                  <p className="text-sm text-gray-600">{feature.description}</p>
                 </div>
               </div>
             ))}

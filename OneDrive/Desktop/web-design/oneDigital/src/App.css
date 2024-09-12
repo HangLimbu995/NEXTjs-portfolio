@@ -85,3 +85,22 @@ button {
 .animate-wave span:nth-child(3n) {
   animation-delay: 0.75s;
 }
+
+@keyframes text-wave {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+.animate-text-wave {
+  animation: text-wave 4s ease-in-out infinite;
+}
+
+.animation-delay-3000 {
+  animation-delay: 3s;
+}

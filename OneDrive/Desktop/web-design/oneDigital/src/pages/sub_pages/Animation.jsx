@@ -8,22 +8,40 @@ import editing from '../../assets/editing.jpg'
 const Animation = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className='relative h-[60vh] md:h-[70vh] bg-gradient-to-r from-purple-600 to-indigo-600 flex justify-center items-center overflow-hidden'>
+      <header className='relative h-[60vh] md:h-[80vh] bg-gradient-to-br from-indigo-700 via-purple-700 to-pink-600 flex flex-col justify-center items-center overflow-hidden'>
         <motion.h1 
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className='text-white text-4xl md:text-6xl lg:text-7xl font-bold z-10 text-center px-4 capitalize'
+          className='text-white text-4xl md:text-6xl lg:text-7xl font-bold z-20 text-center px-4 capitalize mb-4'
         >
           Video Editing & Animation Services
         </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className='text-indigo-100 text-xl md:text-2xl text-center mt-4 px-4 max-w-3xl z-20'
+        >
+          Transforming ideas into captivating visual stories
+        </motion.p>
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className='mt-8 z-20'
+        >
+          <Link to="/contact-us" className='bg-pink-500 text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-pink-600 transition duration-300 shadow-lg'>
+            Start Your Project
+          </Link>
+        </motion.div>
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="absolute bottom-0 left-0 w-full"
+          className="absolute bottom-0 left-0 w-full z-10"
         >
-          <svg className="w-full h-auto mt-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <svg className="w-full h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
             <path fill="#ffffff" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,122.7C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
               <animate
                 attributeName="d"
@@ -37,6 +55,7 @@ const Animation = () => {
             </path>
           </svg>
         </motion.div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-50 z-10"></div>
       </header>
       <section className='mt-16 md:mt-24'>
         <div className='container mx-auto px-4 py-12 lg:py-16'>
@@ -137,7 +156,7 @@ const Animation = () => {
             <div className='max-w-4xl mx-auto text-center'>
               <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6'>Elevate Your Content with Professional Editing and Animation</h2>
               <p className='text-lg md:text-xl text-purple-100 leading-relaxed'>
-                At Onetech Solution, we combine creativity with technical expertise to deliver stunning video edits and animations that captivate your audience. Our skilled team uses cutting-edge tools and techniques to bring your ideas to life and make your content stand out in today's competitive digital landscape.
+                At WEBSTARK, we combine creativity with technical expertise to deliver stunning video edits and animations that captivate your audience. Our skilled team uses cutting-edge tools and techniques to bring your ideas to life and make your content stand out in today's competitive digital landscape.
               </p>
             </div>
           </div>

@@ -5,20 +5,35 @@ import { FaDesktop, FaMobileAlt, FaPencilRuler, FaUserFriends } from 'react-icon
 const UIUX = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className='relative h-[60vh] md:h-[70vh] bg-gradient-to-r from-blue-500 to-purple-600 flex justify-center items-center overflow-hidden'>
+      <header className='relative h-[60vh] md:h-[80vh] lg:h-[90vh] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 flex flex-col justify-center items-center overflow-hidden'>
         <motion.h1 
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className='text-white text-4xl md:text-6xl lg:text-7xl font-bold z-10 text-center px-4'
+          className='text-white text-4xl md:text-6xl lg:text-7xl font-bold z-20 text-center px-4 mb-4'
         >
-          UI/UX Design Services
+          UI/UX Design Excellence
         </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className='text-white text-xl md:text-2xl text-center mt-4 px-4 max-w-3xl z-20'
+        >
+          Crafting intuitive and visually stunning digital experiences
+        </motion.p>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className='mt-8 px-8 py-3 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-blue-100 transition duration-300 shadow-lg z-20'
+        >
+          Start Your Design Journey
+        </motion.button>
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="absolute bottom-0 left-0 w-full"
+          className="absolute bottom-0 left-0 w-full z-10"
         >
           <svg className="w-full h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
             <path fill="#ffffff" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,122.7C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -34,9 +49,10 @@ const UIUX = () => {
             </path>
           </svg>
         </motion.div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-30 z-10"></div>
       </header>
 
-      <section className='mt-16 md:mt-24'>
+      <section >
         <div className='container mx-auto px-4 py-12 lg:py-16'>
           <motion.div 
             initial={{ opacity: 0, y: 50 }}

@@ -33,9 +33,20 @@ const WebDebelopment = () => {
     }, [])
     return (
         <div className="min-h-screen flex flex-col">
-            <header className='absolute top-0 w-full h-[50vh] bg-blue-200 flex justify-center items-center'>
-                <h2 className='text-[#1965DF] text-4xl md:text-5xl lg:text-6xl font-bold z-10 text-center px-4'>Website Designing & Development</h2>
-                <div className="absolute bottom-0 left-0 w-full overflow-hidden">
+            <header className='relative h-[60vh] md:h-[80vh] bg-gradient-to-br from-blue-400 to-indigo-600 flex flex-col justify-center items-center overflow-hidden'>
+                <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
+                <h1 className='text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold z-20 text-center px-4 mb-4'>
+                    Website Designing & Development
+                </h1>
+                <p className="text-white text-xl md:text-2xl text-center mt-4 px-4 max-w-3xl z-20">
+                    Crafting Digital Experiences That Drive Success
+                </p>
+                <Link to="/contact-us" className="mt-8 z-20">
+                    <button className="bg-white text-indigo-600 px-8 py-3 rounded-full font-bold text-lg hover:bg-indigo-100 transition duration-300 shadow-lg">
+                        Start Your Web Project
+                    </button>
+                </Link>
+                <div className="absolute bottom-0 left-0 w-full z-10">
                     <svg className="w-full h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
                         <path fill="#ffffff" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,122.7C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
                             <animate
@@ -43,9 +54,9 @@ const WebDebelopment = () => {
                                 dur="10s"
                                 repeatCount="indefinite"
                                 values="
-            M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,122.7C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
-            M0,64L48,90.7C96,117,192,171,288,176C384,181,480,139,576,149.3C672,160,768,224,864,229.3C960,235,1056,181,1152,149.3C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
-            M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,122.7C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                                    M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,122.7C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+                                    M0,64L48,90.7C96,117,192,171,288,176C384,181,480,139,576,149.3C672,160,768,224,864,229.3C960,235,1056,181,1152,149.3C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+                                    M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,122.7C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
                             />
                         </path>
                     </svg>
@@ -106,15 +117,14 @@ const WebDebelopment = () => {
                     </div>
                 </div>
     {/* persuation */}
-    
     <div className='container mx-auto px-4 py-12 lg:py-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-3xl shadow-lg'>
-    <div className='max-w-4xl mx-auto text-center'>
-      <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6'>Unleash Your Brand's Potential with Our Digital Marketing Services</h2>
-      <p className='text-lg md:text-xl text-blue-100 leading-relaxed'>
-        At Onetech Solution, we specialize in driving growth and achieving measurable results through our comprehensive digital marketing services. Our team of experts uses the latest strategies and tools to elevate your brand and connect with your target audience.
-      </p>
+      <div className='max-w-4xl mx-auto text-center'>
+        <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6'>Transform Your Online Presence with Our Web Development Expertise</h2>
+        <p className='text-lg md:text-xl text-blue-100 leading-relaxed'>
+          At WEBSTARK, we craft cutting-edge websites that drive results. Our team of skilled developers combines creativity with technical prowess to build responsive, user-friendly, and high-performing web solutions tailored to your unique business needs.
+        </p>
+      </div>
     </div>
-  </div>
 
                 {/* Informative Websites */}
                 <div className='container mx-auto px-4 py-12 lg:py-16'>

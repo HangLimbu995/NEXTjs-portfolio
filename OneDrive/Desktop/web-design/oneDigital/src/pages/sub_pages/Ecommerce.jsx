@@ -5,9 +5,18 @@ import { FaWhatsapp, FaShoppingCart, FaMobileAlt, FaLock, FaSearch, FaChartLine 
 const Ecommerce = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className='absolute top-0  w-full h-[60vh] md:h-[70vh] bg-gradient-to-r from-blue-400 to-blue-600 flex justify-center items-center overflow-hidden'>
-        <h1 className='text-white text-4xl md:text-5xl lg:text-6xl font-bold z-10 text-center px-4'>E-Commerce Excellence</h1>
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden">
+      <header className='relative h-[60vh] md:h-[80vh] bg-gradient-to-r from-blue-600 to-indigo-600 flex flex-col justify-center items-center overflow-hidden'>
+        <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
+        <h1 className='text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold z-20 text-center px-4 mb-4'>E-Commerce Excellence</h1>
+        <p className="text-white text-xl md:text-2xl text-center mt-4 px-4 max-w-3xl z-20">
+          Elevate Your Online Business with Our Cutting-Edge Solutions
+        </p>
+        <Link to="/contact-us" className="mt-8 z-20">
+          <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-bold text-lg hover:bg-blue-100 transition duration-300 shadow-lg">
+            Start Your E-Commerce Journey
+          </button>
+        </Link>
+        <div className="absolute bottom-0 left-0 w-full z-10">
           <svg className="w-full h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
             <path fill="#ffffff" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,122.7C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
               <animate

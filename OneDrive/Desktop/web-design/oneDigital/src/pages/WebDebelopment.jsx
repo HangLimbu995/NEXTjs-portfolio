@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import rocket from '../../assets/rocket.png'
-import ServiceImageImporter from '../../helpers/ServiceImageImporter'
+import rocket from '../assets/rocket.png'
+import ServiceImageImporter from '../helpers/ServiceImageImporter'
 import { Link } from 'react-router-dom'
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -62,7 +62,7 @@ const WebDebelopment = () => {
                     </svg>
                 </div>
             </header>
-            <section className='mt-[50vh]'>
+            <section className='container w-full sm:w-[90%] px-4 mx-auto'>
                 {/* MasterPieces */}
                 <div className='container mx-auto px-4 py-12 lg:py-16'>
                     <div className='flex flex-col lg:flex-row items-center justify-between gap-12'>
@@ -110,7 +110,6 @@ const WebDebelopment = () => {
                             <img
                                 src={masterPieces}
                                 alt="Our Approach to Web Development"
-                                className='w-full h-auto rounded-lg shadow-lg transition-transform duration-300 hover:scale-105'
                                 loading="lazy"
                             />
                         </div>
@@ -133,7 +132,6 @@ const WebDebelopment = () => {
                             <img
                                 src={informative}
                                 alt="Informative Websites"
-                                className='w-full h-auto rounded-lg shadow-lg transition-transform duration-300 hover:scale-105'
                                 loading="lazy"
                             />
                         </div>
@@ -228,7 +226,6 @@ const WebDebelopment = () => {
                             <img
                                 src={eCommerce}
                                 alt="E-Commerce Websites"
-                                className='w-full h-auto rounded-lg shadow-lg transition-transform duration-300 hover:scale-105'
                                 loading="lazy"
                             />
                         </div>
@@ -243,7 +240,6 @@ const WebDebelopment = () => {
                             <img
                                 src={customWebsite}
                                 alt="Custom Websites"
-                                className='w-full h-auto rounded-lg shadow-lg transition-transform duration-300 hover:scale-105'
                                 loading="lazy"
                             />
                         </div>
@@ -292,7 +288,7 @@ const WebDebelopment = () => {
                     </div>
                 </div>
 
-                <div className="bg-gray-100 py-16">
+                <div className=" py-16">
                     <div className="container mx-auto px-4">
                         <h2 className="text-3xl font-bold text-center mb-12">Our Web Development Expertise</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
@@ -330,7 +326,7 @@ const WebDebelopment = () => {
                     </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-blue-500 to-indigo-600 py-16">
+                <div className="bg-gradient-to-r from-blue-500 to-indigo-600 py-16 rounded-lg mb-9">
                     <div className="container mx-auto px-4 text-center">
                         <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
                         <p className="text-xl text-white mb-8">Contact us today to discuss your website design needs and discover how we can help you achieve your business goals.</p>

@@ -33,7 +33,7 @@ const Ecommerce = () => {
         </div>
       </header>
 
-      <section className='container mx-auto px-4 py-12 lg:py-16 mt-[50vh]'>
+      <section className='container w-full sm:w-[90%] px-4 mx-auto'>
         <h2 className='text-3xl md:text-4xl font-bold text-center mb-8'>Why Choose Our E-Commerce Solutions?</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {[
@@ -53,10 +53,10 @@ const Ecommerce = () => {
         </div>
       </section>
 
-      <section className='bg-gray-100 py-12 lg:py-16'>
+      <section className=' container w-full sm:w-[90%] px-4 mx-auto mt-16'>
         <div className='container mx-auto px-4'>
           <h2 className='text-3xl md:text-4xl font-bold text-center mb-8'>Our E-Commerce Development Process</h2>
-          <div className='space-y-8'>
+          <div className='space-y-8 grid grid-cols-1 md:grid-cols-2'>
             {[
               { step: '1', title: 'Requirement Analysis', description: 'We start by understanding your business needs and goals.' },
               { step: '2', title: 'Design & Prototyping', description: 'Creating visually appealing and functional designs.' },
@@ -78,7 +78,7 @@ const Ecommerce = () => {
         </div>
       </section>
 
-      <section className='container mx-auto px-4 py-12 lg:py-16'>
+      <section className='container w-full sm:w-[90%] px-4 mx-auto mt-16'>
         <h2 className='text-3xl md:text-4xl font-bold text-center mb-8'>Our Previous E-Commerce Work</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {[
@@ -97,7 +97,7 @@ const Ecommerce = () => {
         </div>
       </section>
 
-      <section className='container mx-auto px-4 py-12 lg:py-16'>
+      <section className='container mx-auto py-12 lg:py-16'>
         <div className='bg-blue-600 text-white rounded-lg p-8 text-center'>
           <h2 className='text-3xl md:text-4xl font-bold mb-4'>Ready to Boost Your Online Sales?</h2>
           <p className='text-xl mb-6'>Let's create an e-commerce solution that drives results!</p>

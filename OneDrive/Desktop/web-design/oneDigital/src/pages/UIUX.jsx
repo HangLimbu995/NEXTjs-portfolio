@@ -49,7 +49,6 @@ const UIUX = () => {
             </path>
           </svg>
         </motion.div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-30 z-10"></div>
       </header>
 
       <section >
@@ -90,9 +89,9 @@ const UIUX = () => {
       </section>
 
       <section className='bg-gray-100 py-16'>
-        <div className='container mx-auto px-4'>
+        <div className='container mx-auto px-4  flex flex-col items-center justify-center'>
           <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>Our Design Process</h2>
-          <div className='flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-8'>
+          <div className='container w-full lg:w-4/5 flex flex-col justify-evenly md:flex-row gap-3'>
             {['Research', 'Wireframing', 'Prototyping', 'User Testing', 'Implementation'].map((step, index) => (
               <motion.div
                 key={index}
@@ -101,7 +100,7 @@ const UIUX = () => {
                 transition={{ delay: index * 0.2, duration: 0.5 }}
                 className='bg-white p-4 rounded-full shadow-md'
               >
-                <span className='text-lg font-semibold text-blue-600'>{step}</span>
+                <span className='text-lg font-semibold text-blue-600 whitespace-nowrap '>{step}</span>
               </motion.div>
             ))}
           </div>

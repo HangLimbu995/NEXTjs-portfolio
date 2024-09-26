@@ -1,8 +1,8 @@
 import React from 'react'
-import DigitalMarketingImage from '../../helpers/DigitalMarketingImage'
+import DigitalMarketingImage from '../helpers/DigitalMarketingImage'
 import { Link } from 'react-router-dom'
 import { FaWhatsapp } from 'react-icons/fa'
-import rocket from '../../assets/rocket.png'
+import rocket from '../assets/rocket.png'
 
 const {
   content,
@@ -50,7 +50,7 @@ const DigitalMarketing = () => {
           </svg>
         </div>
       </header>
-      <section className='mt-[50vh]'>
+      <section className='container w-full sm:w-[90%] px-4 mx-auto'>
         {/* MasterPieces */}
         <div className='container mx-auto px-4 py-12 lg:py-16'>
           <div className='flex flex-col lg:flex-row items-center justify-between gap-12'>
@@ -101,7 +101,6 @@ const DigitalMarketing = () => {
               <img
                 src={skyrocket}
                 alt="Digital Marketing Strategies"
-                className='w-full h-auto rounded-lg shadow-lg transition-transform duration-300 hover:scale-105'
                 loading="lazy"
               />
             </div>

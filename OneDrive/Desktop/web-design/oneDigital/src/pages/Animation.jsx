@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaWhatsapp } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
-import editing from '../../assets/editing.jpg'
+import editing from '../assets/editing.jpg'
 
 const Animation = () => {
   return (
@@ -57,7 +57,7 @@ const Animation = () => {
         </motion.div>
         <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-50 z-10"></div>
       </header>
-      <section className='mt-16 md:mt-24'>
+      <section className='container w-full sm:w-[90%] px-4 mx-auto'>
         <div className='container mx-auto px-4 py-12 lg:py-16'>
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
@@ -138,7 +138,6 @@ const Animation = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
-                className="bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl shadow-2xl overflow-hidden"
               >
                 <img src={editing} alt="Video Editing" className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300" />
               </motion.div>

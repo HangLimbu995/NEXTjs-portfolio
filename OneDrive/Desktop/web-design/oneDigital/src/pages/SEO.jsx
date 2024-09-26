@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
-import seoMain from '../../assets/seo-main.svg'
-import seo from '../../assets/digital-marketing/seo.jpeg'
-import ppc from '../../assets/digital-marketing/ppc.jpg'
-import rocket from '../../assets/rocket.png'
+import seoMain from '../assets/seo-main.svg'
+import rocket from '../assets/rocket.png'
 import {motion} from 'framer-motion'
 import {Link } from 'react-router-dom'
 import {FaWhatsapp } from 'react-icons/fa'
@@ -88,7 +86,7 @@ const SEO = () => {
     </header>
     <section>
       {/* MasterPieces */}
-      <div className='container mx-auto px-4 py-16 lg:py-24'>
+      <div className='container w-full sm:w-[90%] px-4 mx-auto'>
         <div className='flex flex-col lg:flex-row items-center justify-between gap-16'>
           <div className='w-full lg:w-1/2 flex flex-col gap-10'>
             <h2 className='text-4xl md:text-5xl font-bold leading-tight text-gray-800'>
@@ -148,7 +146,6 @@ const SEO = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl shadow-2xl overflow-hidden"
             >
               <img
                 src={seoMain}

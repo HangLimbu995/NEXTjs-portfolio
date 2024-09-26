@@ -1,12 +1,11 @@
 import React from 'react'
-import whatsapp from '../../assets/whatsapp.gif'
-import rocket from '../../assets/rocket.png'
+import whatsapp from '../assets/whatsapp.gif'
 import { motion } from 'framer-motion'
 import {Link } from 'react-router-dom'
 import { FaWhatsapp } from 'react-icons/fa'
-import social from '../../assets/digital-marketing/social.jpeg'
-import seo from '../../assets/digital-marketing/seo.jpeg'
-import ppc from '../../assets/digital-marketing/ppc.jpg'
+import social from '../assets/digital-marketing/social.jpeg'
+import seo from '../assets/digital-marketing/seo.jpeg'
+import ppc from '../assets/digital-marketing/ppc.jpg'
 
 
 const Marketing = () => {
@@ -52,7 +51,7 @@ const Marketing = () => {
     </header>
     <section>
       {/* MasterPieces */}
-      <div className='container mx-auto px-4 py-12 lg:py-16'>
+      <div className='container w-full sm:w-[90%] px-4 mx-auto'>
         <div className='flex flex-col lg:flex-row items-center justify-between gap-12'>
           <div className='w-full lg:w-1/2 flex flex-col gap-8'>
             <h3 className='text-3xl md:text-4xl font-bold leading-tight text-gray-800'>
@@ -106,11 +105,11 @@ const Marketing = () => {
               </Link>
             </div>
           </div>
-          <div className='w-full lg:w-1/2'>
+          <div className=''>
             <img
               src={whatsapp}
               alt="Digital Marketing Strategies"
-              className='w-full h-auto rounded-lg shadow-lg transition-transform duration-300 hover:scale-105'
+              className='w-full h-auto5'
               loading="lazy"
             />
           </div>
